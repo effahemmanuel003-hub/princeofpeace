@@ -23,12 +23,12 @@
         </div>
     </header>
 
-    <!-- Hero Showcase Section -->
-    <section class="hero-section">
+    <!-- Hero Showcase Section with Clean Layout Background -->
+    <section class="hero-section" style="background-image: linear-gradient(135deg, rgba(13, 110, 253, 0.92), rgba(25, 135, 84, 0.85)), url('https://unsplash.com'); background-size: cover; background-position: center; color: white;">
         <div class="hero-content">
-            <h1>Professional Healthcare Services You Can Trust</h1>
-            <p class="location-tag"><i class="fa-solid fa-location-dot"></i> Kintampo, Ghana</p>
-            <p class="hero-subtext">Providing comprehensive medical treatments, high-quality patient care, and modern clinical services to the Kintampo community.</p>
+            <h1 style="color: white;">Professional Healthcare Services You Can Trust</h1>
+            <p class="location-tag" style="background-color: rgba(255, 255, 255, 0.2); color: white;"><i class="fa-solid fa-location-dot"></i> Kintampo, Ghana</p>
+            <p class="hero-subtext" style="color: #e2e8f0;">Providing comprehensive medical treatments, high-quality patient care, and modern clinical services to the Kintampo community.</p>
             <div class="hero-actions">
                 <a href="https://wa.me" target="_blank" class="cta-btn whatsapp-cta">
                     <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
@@ -40,33 +40,66 @@
         </div>
     </section>
 
-    <!-- Medical Services Section -->
+    <!-- Hospital Video Showcase Section -->
     <section class="section container">
+        <h2 class="section-title">Take a Virtual Tour</h2>
+        <div style="max-width: 800px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background-color: #000;">
+            <!-- Responsive Video Embed Framework -->
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    src="https://youtube.com" 
+                    title="Hospital Tour Video" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                 iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical Services Section with Full Imagery -->
+    <section class="section container" style="padding-top: 20px;">
         <h2 class="section-title">Our Medical Services</h2>
         <div class="services-grid">
             
-            <div class="service-card">
-                <div class="service-icon-box"><i class="fa-solid fa-user-doctor"></i></div>
-                <h3>General Consulting</h3>
-                <p>Routine medical assessments, diagnoses, and personalized treatment plans provided by experienced clinical practitioners.</p>
+            <!-- Service 1 -->
+            <div class="service-card" style="padding: 0; overflow: hidden;">
+                <img src="https://unsplash.com" alt="General Consulting" style="width: 100%; height: 180px; object-fit: cover;">
+                <div style="padding: 25px 20px;">
+                    <div class="service-icon-box" style="margin-top: -55px; position: relative; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h3>General Consulting</h3>
+                    <p>Routine medical assessments, diagnoses, and personalized treatment plans provided by experienced clinical practitioners.</p>
+                </div>
             </div>
 
-            <div class="service-card">
-                <div class="service-icon-box"><i class="fa-solid fa-baby"></i></div>
-                <h3>Maternity Care</h3>
-                <p>Comprehensive prenatal assessments, safe delivery support, and specialized postnatal monitoring for mothers and infants.</p>
+            <!-- Service 2 -->
+            <div class="service-card" style="padding: 0; overflow: hidden;">
+                <img src="https://unsplash.com" alt="Maternity Care" style="width: 100%; height: 180px; object-fit: cover;">
+                <div style="padding: 25px 20px;">
+                    <div class="service-icon-box" style="margin-top: -55px; position: relative; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"><i class="fa-solid fa-baby"></i></div>
+                    <h3>Maternity Care</h3>
+                    <p>Comprehensive prenatal assessments, safe delivery support, and specialized postnatal monitoring for mothers and infants.</p>
+                </div>
             </div>
 
-            <div class="service-card">
-                <div class="service-icon-box"><i class="fa-solid fa-truck-medical"></i></div>
-                <h3>24/7 Emergency</h3>
-                <p>Rapid-response critical care units operating around the clock to manage acute medical emergencies and accidents.</p>
+            <!-- Service 3 -->
+            <div class="service-card" style="padding: 0; overflow: hidden;">
+                <img src="https://unsplash.com" alt="24/7 Emergency" style="width: 100%; height: 180px; object-fit: cover;">
+                <div style="padding: 25px 20px;">
+                    <div class="service-icon-box" style="margin-top: -55px; position: relative; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"><i class="fa-solid fa-truck-medical"></i></div>
+                    <h3>24/7 Emergency</h3>
+                    <p>Rapid-response critical care units operating around the clock to manage acute medical emergencies and accidents.</p>
+                </div>
             </div>
 
-            <div class="service-card">
-                <div class="service-icon-box"><i class="fa-solid fa-flask-vial"></i></div>
-                <h3>Laboratory Testing</h3>
-                <p>Modern diagnostic screening facilities ensuring accurate blood assessments, pathology tests, and rapid medical reporting.</p>
+            <!-- Service 4 -->
+            <div class="service-card" style="padding: 0; overflow: hidden;">
+                <img src="https://unsplash.com" alt="Laboratory Testing" style="width: 100%; height: 180px; object-fit: cover;">
+                <div style="padding: 25px 20px;">
+                    <div class="service-icon-box" style="margin-top: -55px; position: relative; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"><i class="fa-solid fa-flask-vial"></i></div>
+                    <h3>Laboratory Testing</h3>
+                    <p>Modern diagnostic screening facilities ensuring accurate blood assessments, pathology tests, and rapid medical reporting.</p>
+                </div>
             </div>
 
         </div>
