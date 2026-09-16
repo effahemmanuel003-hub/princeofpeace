@@ -1,251 +1,460 @@
-/* Core Styling Configurations */
+/* ================================
+   PRINCE OF PEACE HOSPITAL
+   MAIN WEBSITE STYLES
+================================ */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root {
-    --primary-color: #0d6efd;
-    --secondary-color: #198754;
-    --dark-neutral: #212529;
-    --light-bg: #f8f9fa;
-    --white: #ffffff;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--white);
-    color: var(--dark-neutral);
-    line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f9fc;
+  color: #172033;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
 }
 
-/* Main Navigation Bar Layout */
+
+/* ================================
+   HEADER
+================================ */
+
 .main-header {
-    background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background: white;
+  border-bottom: 1px solid #e6eaf0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 15px 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--primary-color);
+  font-size: 27px;
+  font-weight: 800;
+  color: #1769e0;
 }
 
-.logo-icon {
-    font-size: 1.6rem;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #344054;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1769e0;
 }
 
 .call-btn-top {
-    background-color: var(--light-bg);
-    color: var(--dark-neutral);
-    padding: 8px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    border: 1px solid #e0e0e0;
+  background: #1769e0;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.3s;
 }
 
-/* Hero Section Presentation Layout */
+.call-btn-top:hover {
+  background: #0d55bb;
+  transform: translateY(-2px);
+}
+
+
+/* ================================
+   HERO
+================================ */
+
 .hero-section {
-    background: linear-gradient(135deg, rgba(13, 110, 253, 0.07) 0%, rgba(25, 135, 84, 0.05) 100%);
-    padding: 90px 20px;
-    text-align: center;
+  background: linear-gradient(
+    135deg,
+    #eaf3ff,
+    #f8fbff
+  );
+
+  padding: 100px 0;
 }
 
 .hero-content {
-    max-width: 750px;
-    margin: 0 auto;
+  max-width: 760px;
+}
+
+.hero-tag {
+  color: #1769e0;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
 }
 
 .hero-content h1 {
-    font-size: 2.6rem;
-    font-weight: 800;
-    color: #111827;
-    line-height: 1.2;
-    margin-bottom: 15px;
+  font-size: 52px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  color: #111827;
 }
 
-.location-tag {
-    display: inline-block;
-    background-color: rgba(13, 110, 253, 0.1);
-    color: var(--primary-color);
-    padding: 4px 14px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    margin-bottom: 20px;
+.hero-content > p:not(.hero-tag) {
+  font-size: 19px;
+  color: #667085;
+  max-width: 680px;
+  margin-bottom: 32px;
 }
 
-.hero-subtext {
-    font-size: 1.1rem;
-    color: #4b5563;
-    margin-bottom: 35px;
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.hero-actions {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 14px 25px;
+  border-radius: 9px;
+
+  font-weight: 700;
+  transition: 0.3s;
 }
 
-.cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.primary-button {
+  background: #1769e0;
+  color: white;
 }
 
-.cta-btn:hover {
-    transform: translateY(-1px);
+.primary-button:hover {
+  background: #0d55bb;
+  transform: translateY(-2px);
 }
 
-.whatsapp-cta {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    box-shadow: 0 4px 12px rgba(25, 135, 84, 0.2);
+.secondary-button {
+  background: white;
+  color: #1769e0;
+  border: 2px solid #1769e0;
 }
 
-.phone-cta {
-    background-color: var(--primary-color);
-    color: var(--white);
-    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+.secondary-button:hover {
+  background: #1769e0;
+  color: white;
 }
 
-/* Medical Services Layout Grid */
+
+/* ================================
+   SECTIONS
+================================ */
+
 .section {
-    padding: 80px 0;
+  padding-top: 85px;
+  padding-bottom: 85px;
 }
 
 .section-title {
-    text-align: center;
-    font-size: 1.85rem;
-    font-weight: 700;
-    margin-bottom: 45px;
-    position: relative;
+  text-align: center;
+  margin-bottom: 45px;
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
+.section-title p {
+  color: #1769e0;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
 }
 
-.service-card {
-    background-color: var(--white);
-    border: 1px solid #eef2f6;
-    border-radius: 12px;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.01);
-    transition: box-shadow 0.2s ease;
+.section-title h2 {
+  font-size: 38px;
+  line-height: 1.2;
+  color: #111827;
 }
 
-.service-card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.04);
-}
 
-.service-icon-box {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(13, 110, 253, 0.06);
-    color: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    margin: 0 auto 20px;
-}
+/* ================================
+   ABOUT / INFO
+================================ */
 
-.service-card h3 {
-    margin-bottom: 12px;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.service-card p {
-    color: #6b7280;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-/* Structural Informational Layout Blocks */
 .info-section {
-    background-color: var(--light-bg);
-    padding: 60px 0;
-    border-top: 1px solid #edf2f7;
+  background: white;
+  border-radius: 20px;
+  padding: 45px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
 
 .info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-@media (max-width: 768px) {
-    .info-grid { grid-template-columns: 1fr; gap: 30px; }
-    .hero-content h1 { font-size: 2rem; }
+.info-block {
+  text-align: center;
+  padding: 20px;
 }
 
-.info-block h2 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    color: #111827;
+.info-block i {
+  font-size: 34px;
+  color: #1769e0;
+  margin-bottom: 18px;
+}
+
+.info-block h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+  color: #172033;
 }
 
 .info-block p {
-    color: #4b5563;
-    font-size: 0.95rem;
+  color: #667085;
 }
 
-.hours-list li {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px dashed #e2e8f0;
-    font-size: 0.95rem;
+
+/* ================================
+   FACILITY / SERVICE CARDS
+================================ */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 
-/* Footer Element Properties */
+.service-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e5eaf0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =====================================
+   IMPORTANT IMAGE FIX
+   Shows the COMPLETE photograph.
+===================================== */
+
+.service-card img {
+  width: 100%;
+
+  /* Do NOT force a short fixed height */
+  height: auto;
+
+  /* Shows the complete photograph */
+  object-fit: contain;
+
+  background: #eef2f6;
+}
+
+
+/* ================================
+   CARD CONTENT
+================================ */
+
+.service-card-content {
+  padding: 30px;
+}
+
+.service-icon-box {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eaf3ff;
+  color: #1769e0;
+
+  border-radius: 12px;
+
+  margin-bottom: 18px;
+}
+
+.service-icon-box i {
+  font-size: 23px;
+}
+
+.service-card-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #172033;
+}
+
+.service-card-content p {
+  color: #667085;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+#contact {
+  padding-bottom: 100px;
+}
+
+.hours-list p {
+  margin-bottom: 5px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
 .main-footer {
-    background-color: #111827;
-    color: #9ca3af;
-    padding: 40px 20px;
-    text-align: center;
-    font-size: 0.85rem;
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 55px 0;
 }
 
-.main-footer p { margin-bottom: 5px; }
-.developer-tag { color: #6b7280; margin-top: 10px; }
-.developer-tag strong { color: var(--primary-color); }
+.main-footer h2 {
+  margin-bottom: 10px;
+}
+
+.main-footer p {
+  color: #b8c0cc;
+  margin-bottom: 8px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+  .header-container {
+    min-height: auto;
+    padding: 18px 0;
+
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .call-btn-top {
+    padding: 10px 15px;
+  }
+
+  .hero-section {
+    padding: 70px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content > p:not(.hero-tag) {
+    font-size: 17px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title h2 {
+    font-size: 31px;
+  }
+
+  .info-section {
+    padding: 25px;
+  }
+}
+
+
+/* ================================
+   SMALL PHONES
+================================ */
+
+@media (max-width: 480px) {
+
+  .container {
+    width: 92%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+  .service-card-content {
+    padding: 24px;
+  }
+
+  .service-card-content h3 {
+    font-size: 21px;
+  }
+
+}
