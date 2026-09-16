@@ -1,0 +1,454 @@
+/* ================================
+   PRINCE OF PEACE EXECUTIVE GUEST HOUSE
+   MAIN WEBSITE STYLES
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f9fc;
+  color: #172033;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.main-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e6eaf0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 800;
+  color: #1769e0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #344054;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1769e0;
+}
+
+.call-btn-top {
+  background: #1769e0;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.call-btn-top:hover {
+  background: #0d55bb;
+  transform: translateY(-2px);
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    #eaf3ff,
+    #f8fbff
+  );
+
+  padding: 100px 0;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero-tag {
+  color: #1769e0;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+.hero-content > p:not(.hero-tag) {
+  font-size: 19px;
+  color: #667085;
+  max-width: 680px;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 14px 25px;
+  border-radius: 9px;
+
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.primary-button {
+  background: #1769e0;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #0d55bb;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  background: white;
+  color: #1769e0;
+  border: 2px solid #1769e0;
+}
+
+.secondary-button:hover {
+  background: #1769e0;
+  color: white;
+}
+
+
+/* ================================
+   SECTIONS
+================================ */
+
+.section {
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title p {
+  color: #1769e0;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+  line-height: 1.2;
+  color: #111827;
+}
+
+
+/* ================================
+   ABOUT / INFORMATION
+================================ */
+
+.info-section {
+  background: white;
+  border-radius: 20px;
+  padding: 45px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.info-block {
+  text-align: center;
+  padding: 20px;
+}
+
+.info-block i {
+  font-size: 34px;
+  color: #1769e0;
+  margin-bottom: 18px;
+}
+
+.info-block h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+  color: #172033;
+}
+
+.info-block p {
+  color: #667085;
+}
+
+
+/* ================================
+   ROOMS / GUEST HOUSE CARDS
+================================ */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e5eaf0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+
+/* ================================
+   ROOM / FACILITY IMAGES
+   Shows the complete photograph
+================================ */
+
+.service-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #eef2f6;
+}
+
+
+/* ================================
+   CARD CONTENT
+================================ */
+
+.service-card-content {
+  padding: 30px;
+}
+
+.service-icon-box {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eaf3ff;
+  color: #1769e0;
+
+  border-radius: 12px;
+
+  margin-bottom: 18px;
+}
+
+.service-icon-box i {
+  font-size: 23px;
+}
+
+.service-card-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #172033;
+}
+
+.service-card-content p {
+  color: #667085;
+}
+
+
+/* ================================
+   BOOKING / CONTACT
+================================ */
+
+#contact {
+  padding-bottom: 100px;
+}
+
+.hours-list p {
+  margin-bottom: 5px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.main-footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 55px 0;
+}
+
+.main-footer h2 {
+  margin-bottom: 10px;
+}
+
+.main-footer p {
+  color: #b8c0cc;
+  margin-bottom: 8px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+  .header-container {
+    min-height: auto;
+    padding: 18px 0;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .call-btn-top {
+    padding: 10px 15px;
+  }
+
+  .hero-section {
+    padding: 70px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content > p:not(.hero-tag) {
+    font-size: 17px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title h2 {
+    font-size: 31px;
+  }
+
+  .info-section {
+    padding: 25px;
+  }
+}
+
+
+/* ================================
+   SMALL PHONES
+================================ */
+
+@media (max-width: 480px) {
+
+  .container {
+    width: 92%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+  .service-card-content {
+    padding: 24px;
+  }
+
+  .service-card-content h3 {
+    font-size: 21px;
+  }
+
+}
