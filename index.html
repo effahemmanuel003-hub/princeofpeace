@@ -1,304 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Prince of Peace Hospital | Kintampo</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+</head>
+
 <body>
 
   <!-- HEADER -->
-  <header class="header">
-    <div class="container header-content">
-      <h1>Prince of Peace Hospital</h1>
+  <header class="main-header">
+    <div class="header-container">
 
-      <a href="tel:+233000000000" class="call-button">
-        Call<br>
-        Clinic
+      <div class="logo">
+        Prince of Peace Hospital
+      </div>
+
+      <nav>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <a href="tel:+233000000000" class="call-btn-top">
+        <i class="fas fa-phone"></i>
+        Call Clinic
       </a>
+
     </div>
   </header>
 
 
-  <!-- HERO SECTION -->
-  <section class="hero">
+  <!-- HERO -->
+  <section class="hero-section" id="home">
+
     <div class="container">
-      <h2>Professional Healthcare You Can Trust</h2>
 
-      <p>
-        Welcome to Prince of Peace Hospital. We are committed to providing
-        quality healthcare in a safe, comfortable and caring environment.
-      </p>
+      <div class="hero-content">
 
-      <a href="tel:+233000000000" class="primary-button">
-        Call Us Today
-      </a>
+        <p class="hero-tag">
+          PRINCE OF PEACE HOSPITAL • KINTAMPO
+        </p>
+
+        <h1>
+          Professional Healthcare
+          <br>
+          Services You Can Trust
+        </h1>
+
+        <p>
+          Compassionate healthcare delivered by dedicated professionals
+          in a safe, welcoming and comfortable environment.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#services" class="primary-button">
+            Our Services
+          </a>
+
+          <a href="tel:+233000000000" class="secondary-button">
+            <i class="fas fa-phone"></i>
+            Call Us
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
+
   </section>
 
 
-  <!-- ABOUT SECTION -->
-  <section class="section">
-    <div class="container">
-      <h2>About Prince of Peace Hospital</h2>
+  <!-- ABOUT -->
+  <section class="section container" id="about">
 
-      <p>
-        Prince of Peace Hospital provides compassionate and professional
-        healthcare services for individuals and families. Our team is
-        dedicated to patient care, comfort and well-being.
-      </p>
+    <div class="section-title">
+      <p>ABOUT US</p>
+      <h2>Committed to Your Health</h2>
     </div>
+
+    <div class="info-section">
+
+      <div class="info-grid">
+
+        <div class="info-block">
+
+          <i class="fas fa-hospital"></i>
+
+          <h3>Quality Healthcare</h3>
+
+          <p>
+            Prince of Peace Hospital provides professional and compassionate
+            healthcare services to individuals and families.
+          </p>
+
+        </div>
+
+
+        <div class="info-block">
+
+          <i class="fas fa-user-doctor"></i>
+
+          <h3>Professional Care</h3>
+
+          <p>
+            Our dedicated healthcare team is committed to providing
+            respectful and patient-focused care.
+          </p>
+
+        </div>
+
+
+        <div class="info-block">
+
+          <i class="fas fa-heart-pulse"></i>
+
+          <h3>Patient First</h3>
+
+          <p>
+            We place the comfort, safety and well-being of our patients
+            at the heart of everything we do.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </section>
 
 
-  <!-- FACILITIES SECTION -->
-  <section class="section facilities">
-    <div class="container">
+  <!-- FACILITIES -->
+  <section class="section container">
 
-      <h2>Our Facilities</h2>
+    <div class="section-title">
+      <p>OUR FACILITIES</p>
+      <h2>Our Hospital Environment</h2>
+    </div>
 
-      <!-- OUTPATIENT DEPARTMENT -->
-      <div class="facility-card">
+
+    <div class="services-grid">
+
+
+      <!-- OPD -->
+      <div class="service-card">
 
         <img
           src="images/caesarapp_201911419492612.jpg"
           alt="Outpatient Department"
-          class="facility-image"
         >
 
-        <div class="facility-content">
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-hospital-user"></i>
+          </div>
+
           <h3>Outpatient Dept. (OPD)</h3>
 
           <p>
             Our welcoming reception and spacious waiting area where patients
-            check-in, receive vital assessments, and consult medical staff
-            smoothly.
+            check-in, receive vital assessments and consult medical staff.
           </p>
+
         </div>
 
       </div>
 
 
-      <!-- ADMISSIONS & WARDS -->
-      <div class="facility-card">
+      <!-- ADMISSIONS -->
+      <div class="service-card">
 
         <img
           src="images/caesarapp_201931710162691.jpg"
           alt="Patient Admissions Room"
-          class="facility-image"
         >
 
-        <div class="facility-content">
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-bed"></i>
+          </div>
+
           <h3>Admissions &amp; Wards</h3>
 
           <p>
-            Comfortable, well-ventilated recovery rooms equipped with clean
-            bed stations, monitoring systems, and dedicated nursing attention.
+            Comfortable and well-ventilated recovery rooms designed to
+            support patients throughout their stay.
           </p>
+
         </div>
 
       </div>
 
 
       <!-- ADMINISTRATION -->
-      <div class="facility-card">
+      <div class="service-card">
 
         <img
           src="images/caesarapp_20196197430367.jpg"
           alt="Administration Office"
-          class="facility-image"
         >
 
-        <div class="facility-content">
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-building"></i>
+          </div>
+
           <h3>Administration Office</h3>
 
           <p>
-            Our administration team helps patients and visitors with
-            registration, information and other hospital services.
+            Our administration team assists patients and visitors with
+            registration, information and hospital services.
           </p>
+
         </div>
 
       </div>
 
 
-      <!-- HOSPITAL FACILITY -->
-      <div class="facility-card">
+      <!-- FACILITY -->
+      <div class="service-card">
 
         <img
           src="images/caesarapp_201963211934306.jpg"
-          alt="Prince of Peace Hospital Facility"
-          class="facility-image"
+          alt="Hospital Facility"
         >
 
-        <div class="facility-content">
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-clinic-medical"></i>
+          </div>
+
           <h3>Hospital Facilities</h3>
 
           <p>
-            Our hospital facilities are designed to provide patients with a
-            clean, welcoming and comfortable healthcare environment.
+            Clean and welcoming facilities designed to provide a comfortable
+            environment for patients and visitors.
           </p>
+
         </div>
 
       </div>
 
 
       <!-- PATIENT CARE -->
-      <div class="facility-card">
+      <div class="service-card">
 
         <img
           src="images/caesarapp_201963212111185.jpg"
           alt="Patient Care Area"
-          class="facility-image"
         >
 
-        <div class="facility-content">
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-hand-holding-medical"></i>
+          </div>
+
           <h3>Patient Care</h3>
 
           <p>
-            We focus on providing respectful, compassionate and professional
-            care to every patient who visits our hospital.
+            Compassionate support and professional attention for patients
+            receiving treatment and recovery care.
           </p>
+
         </div>
 
       </div>
 
 
       <!-- MEDICAL SERVICES -->
-      <div class="facility-card">
+      <div class="service-card">
 
         <img
           src="images/caesarapp_201971521323613.jpg"
           alt="Medical Services"
-          class="facility-image"
         >
 
-        <div class="facility-content">
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-stethoscope"></i>
+          </div>
+
           <h3>Medical Services</h3>
 
           <p>
-            Our healthcare services are designed to support patients through
-            consultation, assessment, treatment and recovery.
+            Healthcare services supporting consultation, assessment,
+            treatment and recovery.
           </p>
+
         </div>
 
       </div>
 
 
-      <!-- CLINICAL AREA -->
-      <div class="facility-card">
+      <!-- CLINICAL CARE -->
+      <div class="service-card">
 
         <img
           src="images/caesarapp_201972719117904.jpg"
-          alt="Clinical Area"
-          class="facility-image"
+          alt="Clinical Care Area"
         >
 
-        <div class="facility-content">
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-user-nurse"></i>
+          </div>
+
           <h3>Clinical Care</h3>
 
           <p>
-            Our clinical areas support efficient patient assessment and
-            professional healthcare delivery.
+            Professional clinical areas supporting efficient patient
+            assessment and healthcare delivery.
           </p>
+
         </div>
 
       </div>
 
 
-      <!-- HOSPITAL ENVIRONMENT -->
-      <div class="facility-card">
+      <!-- CARING ENVIRONMENT -->
+      <div class="service-card">
 
         <img
           src="images/caesarapp_20199817391236.jpg"
           alt="Prince of Peace Hospital"
-          class="facility-image"
         >
 
-        <div class="facility-content">
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-heart"></i>
+          </div>
+
           <h3>A Caring Environment</h3>
 
           <p>
-            We strive to create a peaceful and supportive environment where
-            patients can receive the care and attention they deserve.
+            A peaceful and supportive environment where patients can receive
+            the care and attention they deserve.
           </p>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- SERVICES SECTION -->
-  <section class="section services">
-    <div class="container">
+  <!-- SERVICES -->
+  <section class="section container" id="services">
 
+    <div class="section-title">
+      <p>WHAT WE OFFER</p>
       <h2>Our Services</h2>
+    </div>
 
-      <div class="service-grid">
 
-        <div class="service-card">
+    <div class="services-grid">
+
+      <div class="service-card">
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-stethoscope"></i>
+          </div>
+
           <h3>General Consultation</h3>
+
           <p>
             Professional medical consultation and patient assessment.
           </p>
+
         </div>
 
-        <div class="service-card">
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-user-injured"></i>
+          </div>
+
           <h3>Patient Care</h3>
+
           <p>
             Compassionate care and support for admitted patients.
           </p>
+
         </div>
 
-        <div class="service-card">
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-hospital-user"></i>
+          </div>
+
           <h3>Outpatient Services</h3>
+
           <p>
             Convenient healthcare services for patients visiting the hospital.
           </p>
+
         </div>
 
-        <div class="service-card">
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-bed"></i>
+          </div>
+
           <h3>Admissions</h3>
+
           <p>
-            Comfortable accommodation and care for patients who require
-            admission.
+            Comfortable accommodation and professional care for admitted
+            patients.
           </p>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- CONTACT SECTION -->
-  <section class="contact-section">
-    <div class="container">
+  <!-- CONTACT -->
+  <section class="section container" id="contact">
 
-      <h2>Contact Prince of Peace Hospital</h2>
+    <div class="info-section">
 
-      <p>
-        Need medical assistance or more information?
-        Contact our clinic today.
-      </p>
+      <div class="section-title">
 
-      <a href="tel:+233000000000" class="primary-button">
-        Call the Clinic
-      </a>
+        <p>CONTACT US</p>
+
+        <h2>We're Here to Help</h2>
+
+      </div>
+
+      <div class="info-grid">
+
+        <div class="info-block">
+
+          <i class="fas fa-phone"></i>
+
+          <h3>Call the Clinic</h3>
+
+          <p>
+            Speak with our clinic team for more information.
+          </p>
+
+          <a href="tel:+233000000000" class="primary-button">
+            Call Now
+          </a>
+
+        </div>
+
+
+        <div class="info-block">
+
+          <i class="fas fa-location-dot"></i>
+
+          <h3>Location</h3>
+
+          <p>
+            Prince of Peace Hospital
+            <br>
+            Kintampo, Ghana
+          </p>
+
+        </div>
+
+
+        <div class="info-block">
+
+          <i class="fas fa-clock"></i>
+
+          <h3>Opening Hours</h3>
+
+          <div class="hours-list">
+
+            <p>
+              Monday – Sunday
+            </p>
+
+            <p>
+              Open for patient care
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
+
   </section>
 
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="main-footer">
+
     <div class="container">
 
-      <h3>Prince of Peace Hospital</h3>
+      <h2>Prince of Peace Hospital</h2>
 
       <p>
-        Professional healthcare you can trust.
+        Professional healthcare services you can trust.
       </p>
 
       <p>
-        &copy; 2026 Prince of Peace Hospital. All rights reserved.
+        © 2026 Prince of Peace Hospital. All rights reserved.
       </p>
 
     </div>
+
   </footer>
 
 </body>
+</html>
