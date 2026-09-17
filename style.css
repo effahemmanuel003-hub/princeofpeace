@@ -301,16 +301,42 @@ a {
 ========================================================= */
 
 #about {
-  background: #f7f5f0;
+  position: relative;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(184, 138, 43, 0.055),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(184, 138, 43, 0.045),
+      transparent 30%
+    ),
+    #f7f5f0;
 }
 
 .info-section {
-  background: white;
+  position: relative;
+  background: rgba(255, 255, 255, 0.96);
   border: 1px solid #e8e2d7;
   border-radius: 8px;
   padding: 55px;
   box-shadow:
-    0 15px 45px rgba(0, 0, 0, 0.06);
+    0 15px 45px rgba(0, 0, 0, 0.06),
+    0 3px 10px rgba(184, 138, 43, 0.035);
+}
+
+.info-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #b88a2b;
+  border-radius: 0 0 3px 3px;
 }
 
 .info-grid {
@@ -342,9 +368,18 @@ a {
   justify-content: center;
   background: #f6f0e4;
   color: #b88a2b;
+  border: 1px solid rgba(184, 138, 43, 0.15);
   border-radius: 50%;
   font-size: 26px;
   margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(184, 138, 43, 0.08);
+  transition: all 0.3s ease;
+}
+
+.info-block:hover i {
+  background: #b88a2b;
+  color: white;
+  transform: scale(1.06);
 }
 
 .info-block h3 {
@@ -382,13 +417,31 @@ a {
     0 10px 35px rgba(0, 0, 0, 0.07);
   transition:
     transform 0.35s ease,
-    box-shadow 0.35s ease;
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #b88a2b;
+  z-index: 3;
+  transition: width 0.35s ease;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
+  border-color: #ded5c5;
   box-shadow:
     0 20px 50px rgba(0, 0, 0, 0.13);
+}
+
+.service-card:hover::before {
+  width: 100%;
 }
 
 /* ROOM IMAGES */
@@ -420,8 +473,16 @@ a {
   justify-content: center;
   background: #f6f0e4;
   color: #b88a2b;
+  border: 1px solid rgba(184, 138, 43, 0.12);
   border-radius: 5px;
   margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon-box {
+  background: #b88a2b;
+  color: white;
+  transform: translateY(-2px);
 }
 
 .service-icon-box i {
@@ -446,7 +507,13 @@ a {
 ========================================================= */
 
 #services {
-  background: #f7f5f0;
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(184, 138, 43, 0.045),
+      transparent 28%
+    ),
+    #f7f5f0;
 }
 
 #services .services-grid {
@@ -488,6 +555,10 @@ a {
     0 20px 55px rgba(23, 32, 42, 0.16);
 }
 
+#contact .info-section::before {
+  background: #b88a2b;
+}
+
 #contact .info-block {
   border-right-color: rgba(255, 255, 255, 0.12);
 }
@@ -503,6 +574,12 @@ a {
 #contact .info-block i {
   background: rgba(184, 138, 43, 0.14);
   color: #d8ae5c;
+  border-color: rgba(216, 174, 92, 0.18);
+}
+
+#contact .info-block:hover i {
+  background: #b88a2b;
+  color: white;
 }
 
 .hours-list p {
