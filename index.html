@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Prince of Peace Executive Guest House | Kintampo</title>
@@ -12,12 +15,434 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   >
+
+  <style>
+
+    /* =====================================================
+       HERO SLIDER
+    ===================================================== */
+
+    .hero-section {
+      position: relative;
+      min-height: 90vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      color: white;
+      background: #111;
+    }
+
+    .hero-slider {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      pointer-events: none;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .hero-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.78) 0%,
+          rgba(0, 0, 0, 0.55) 45%,
+          rgba(0, 0, 0, 0.20) 100%
+        );
+    }
+
+    .hero-section .container {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      padding: 100px 0;
+    }
+
+    .hero-tag {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.35);
+    }
+
+    .hero-content > p:not(.hero-tag) {
+      max-width: 620px;
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .primary-button,
+    .secondary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s ease;
+    }
+
+    .primary-button:hover,
+    .secondary-button:hover {
+      transform: translateY(-3px);
+    }
+
+    .hero-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+
+      width: 52px;
+      height: 52px;
+
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 50%;
+
+      background: rgba(0,0,0,0.35);
+      color: white;
+
+      font-size: 20px;
+
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      backdrop-filter: blur(5px);
+
+      transition: 0.3s ease;
+    }
+
+    .hero-arrow:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-50%) scale(1.08);
+    }
+
+    .hero-prev {
+      left: 25px;
+    }
+
+    .hero-next {
+      right: 25px;
+    }
+
+    .hero-dots {
+      position: absolute;
+      z-index: 5;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      display: flex;
+      gap: 9px;
+    }
+
+    .hero-dot {
+      width: 11px;
+      height: 11px;
+
+      border: none;
+      border-radius: 50%;
+
+      background: rgba(255,255,255,0.5);
+
+      cursor: pointer;
+
+      transition: 0.3s ease;
+    }
+
+    .hero-dot.active {
+      width: 30px;
+      border-radius: 10px;
+      background: white;
+    }
+
+
+    /* =====================================================
+       FEATURED ROOM
+    ===================================================== */
+
+    .featured-room {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 45px;
+      align-items: center;
+      margin-top: 40px;
+      margin-bottom: 80px;
+    }
+
+    .featured-room-image {
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.14);
+    }
+
+    .featured-room-image img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .featured-room-image:hover img {
+      transform: scale(1.04);
+    }
+
+    .featured-room-content {
+      padding: 20px;
+    }
+
+    .featured-label {
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .featured-room-content h3 {
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .featured-room-content p:not(.featured-label) {
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+
+    /* =====================================================
+       GALLERY
+    ===================================================== */
+
+    .gallery-section {
+      margin-top: 30px;
+    }
+
+    .gallery-grid {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 16px;
+
+      margin-top: 35px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+
+      aspect-ratio: 4 / 3;
+
+      background: #eee;
+
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2) {
+      grid-column: span 2;
+      aspect-ratio: 16 / 9;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+      transition:
+        transform 0.55s ease,
+        filter 0.55s ease;
+    }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.30),
+        transparent 55%
+      );
+
+      opacity: 0;
+
+      transition: 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .hero-section {
+        min-height: 80vh;
+      }
+
+      .hero-content {
+        padding: 100px 20px 100px;
+      }
+
+      .hero-content h1 {
+        font-size: 48px;
+      }
+
+      .featured-room {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .featured-room-image img {
+        height: 380px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(2) {
+        grid-column: span 2;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .hero-section {
+        min-height: 75vh;
+      }
+
+      .hero-content {
+        padding: 80px 15px 90px;
+      }
+
+      .hero-content h1 {
+        font-size: 39px;
+      }
+
+      .hero-content > p:not(.hero-tag) {
+        font-size: 16px;
+      }
+
+      .hero-arrow {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+      }
+
+      .hero-prev {
+        left: 12px;
+      }
+
+      .hero-next {
+        right: 12px;
+      }
+
+      .featured-room-image img {
+        height: 300px;
+      }
+
+      .featured-room-content {
+        padding: 5px;
+      }
+
+      .featured-room-content h3 {
+        font-size: 30px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .gallery-item {
+        border-radius: 10px;
+      }
+
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(2) {
+        grid-column: span 2;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
-  <!-- HEADER -->
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
   <header class="main-header">
+
     <div class="header-container">
 
       <div class="logo">
@@ -25,25 +450,84 @@
       </div>
 
       <nav>
+
         <div class="nav-links">
+
           <a href="#home">Home</a>
+
           <a href="#about">About</a>
+
           <a href="#rooms">Rooms</a>
+
+          <a href="#gallery">Gallery</a>
+
           <a href="#contact">Contact</a>
+
         </div>
+
       </nav>
 
       <a href="#contact" class="call-btn-top">
+
         <i class="fas fa-calendar-check"></i>
+
         Book Your Stay
+
       </a>
 
     </div>
+
   </header>
 
 
-  <!-- HERO -->
+
+  <!-- =====================================================
+       HERO SLIDER
+  ===================================================== -->
+
   <section class="hero-section" id="home">
+
+
+    <!-- SLIDES -->
+
+    <div class="hero-slider">
+
+
+      <div class="hero-slide active">
+
+        <img
+          src="images/hero-1.jpg"
+          alt="Prince of Peace Executive Guest House exterior"
+        >
+
+      </div>
+
+
+      <div class="hero-slide">
+
+        <img
+          src="images/hero-2.jpg"
+          alt="Prince of Peace Executive Guest House exterior"
+        >
+
+      </div>
+
+
+      <div class="hero-slide">
+
+        <img
+          src="images/hero-3.jpg"
+          alt="Prince of Peace Executive Guest House exterior"
+        >
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- HERO CONTENT -->
 
     <div class="container">
 
@@ -65,15 +549,24 @@
           hospitality come together.
         </p>
 
+
         <div class="hero-buttons">
 
           <a href="#rooms" class="primary-button">
+
+            <i class="fas fa-bed"></i>
+
             Explore Our Rooms
+
           </a>
 
+
           <a href="#contact" class="secondary-button">
+
             <i class="fas fa-phone"></i>
+
             Contact Us
+
           </a>
 
         </div>
@@ -82,20 +575,82 @@
 
     </div>
 
+
+
+    <!-- PREVIOUS BUTTON -->
+
+    <button
+      class="hero-arrow hero-prev"
+      aria-label="Previous image"
+    >
+
+      <i class="fas fa-chevron-left"></i>
+
+    </button>
+
+
+
+    <!-- NEXT BUTTON -->
+
+    <button
+      class="hero-arrow hero-next"
+      aria-label="Next image"
+    >
+
+      <i class="fas fa-chevron-right"></i>
+
+    </button>
+
+
+
+    <!-- DOTS -->
+
+    <div class="hero-dots">
+
+      <button
+        class="hero-dot active"
+        data-slide="0"
+        aria-label="Show hero image 1"
+      ></button>
+
+      <button
+        class="hero-dot"
+        data-slide="1"
+        aria-label="Show hero image 2"
+      ></button>
+
+      <button
+        class="hero-dot"
+        data-slide="2"
+        aria-label="Show hero image 3"
+      ></button>
+
+    </div>
+
+
   </section>
 
 
-  <!-- ABOUT -->
+
+  <!-- =====================================================
+       ABOUT
+  ===================================================== -->
+
   <section class="section container" id="about">
 
     <div class="section-title">
+
       <p>ABOUT US</p>
+
       <h2>Welcome to Prince of Peace</h2>
+
     </div>
+
 
     <div class="info-section">
 
       <div class="info-grid">
+
 
         <div class="info-block">
 
@@ -109,6 +664,7 @@
           </p>
 
         </div>
+
 
 
         <div class="info-block">
@@ -125,6 +681,7 @@
         </div>
 
 
+
         <div class="info-block">
 
           <i class="fas fa-heart"></i>
@@ -138,6 +695,7 @@
 
         </div>
 
+
       </div>
 
     </div>
@@ -145,247 +703,292 @@
   </section>
 
 
-  <!-- ROOMS & GUEST HOUSE -->
+
+  <!-- =====================================================
+       ROOMS + FEATURED ROOM + GALLERY
+  ===================================================== -->
+
   <section class="section container" id="rooms">
 
+
     <div class="section-title">
+
       <p>OUR GUEST HOUSE</p>
+
       <h2>Explore Prince of Peace</h2>
+
     </div>
 
 
-    <div class="services-grid">
+
+    <!-- FEATURED ROOM -->
+
+    <div class="featured-room">
 
 
-      <!-- PHOTO 1 -->
-      <div class="service-card">
+      <div class="featured-room-image">
 
         <img
-          src="images/WhatsApp Image 2026-09-16 at 3.09.03 PM (1).jpeg"
-          alt="Prince of Peace Executive Guest House"
+          src="images/featured-room.jpg"
+          alt="Featured room at Prince of Peace Executive Guest House"
         >
-
-        <div class="service-card-content">
-
-          <div class="service-icon-box">
-            <i class="fas fa-hotel"></i>
-          </div>
-
-          <h3>Executive Accommodation</h3>
-
-          <p>
-            Comfortable accommodation in a welcoming environment for
-            visitors looking for a peaceful place to stay in Kintampo.
-          </p>
-
-        </div>
 
       </div>
 
 
-      <!-- PHOTO 2 -->
-      <div class="service-card">
 
-        <img
-          src="images/WhatsApp Image 2026-09-16 at 3.09.03 PM.jpeg"
-          alt="Guest House Room"
-        >
+      <div class="featured-room-content">
 
-        <div class="service-card-content">
+        <p class="featured-label">
+          FEATURED ROOM
+        </p>
 
-          <div class="service-icon-box">
-            <i class="fas fa-bed"></i>
-          </div>
+        <h3>
+          Comfortable Rooms for Your Stay
+        </h3>
 
-          <h3>Comfortable Rooms</h3>
-
-          <p>
-            Relax in comfortable spaces designed to provide guests with a
-            pleasant and convenient stay.
-          </p>
-
-        </div>
-
-      </div>
+        <p>
+          Relax in a comfortable and welcoming environment at Prince of Peace
+          Executive Guest House. Our rooms provide guests with a peaceful
+          place to rest while visiting Kintampo.
+        </p>
 
 
-      <!-- PHOTO 3 -->
-      <div class="service-card">
+        <a href="#contact" class="primary-button">
 
-        <img
-          src="images/WhatsApp Image 2026-09-16 at 3.09.06 PM.jpeg"
-          alt="Guest House Interior"
-        >
+          <i class="fas fa-calendar-check"></i>
 
-        <div class="service-card-content">
+          Enquire About a Stay
 
-          <div class="service-icon-box">
-            <i class="fas fa-couch"></i>
-          </div>
-
-          <h3>Welcoming Spaces</h3>
-
-          <p>
-            Discover inviting spaces created to make your visit comfortable
-            from arrival to departure.
-          </p>
-
-        </div>
+        </a>
 
       </div>
 
 
-      <!-- PHOTO 4 -->
-      <div class="service-card">
+    </div>
 
-        <img
-          src="images/WhatsApp Image 2026-09-16 at 3.09.07 PM.jpeg"
-          alt="Prince of Peace Guest House Facility"
-        >
 
-        <div class="service-card-content">
 
-          <div class="service-icon-box">
-            <i class="fas fa-building"></i>
-          </div>
+    <!-- GALLERY -->
 
-          <h3>Guest House Facilities</h3>
+    <div class="gallery-section" id="gallery">
 
-          <p>
-            Explore the facilities and surroundings available at Prince of
-            Peace Executive Guest House.
-          </p>
 
-        </div>
+      <div class="section-title">
+
+        <p>PHOTO GALLERY</p>
+
+        <h2>See Our Guest House</h2>
 
       </div>
 
 
-      <!-- PHOTO 5 -->
-      <div class="service-card">
 
-        <img
-          src="images/WhatsApp Image 2026-09-16 at 3.09.25 PM (1).jpeg"
-          alt="Guest House Environment"
-        >
+      <div class="gallery-grid">
 
-        <div class="service-card-content">
 
-          <div class="service-icon-box">
-            <i class="fas fa-leaf"></i>
-          </div>
+        <!-- RECEPTION -->
 
-          <h3>Peaceful Environment</h3>
+        <div class="gallery-item">
 
-          <p>
-            A calm and welcoming environment where guests can unwind after a
-            busy day.
-          </p>
+          <img
+            src="images/reception-front-desk.jpg"
+            alt="Reception front desk at Prince of Peace Executive Guest House"
+          >
 
         </div>
 
-      </div>
 
+        <div class="gallery-item">
 
-      <!-- PHOTO 6 -->
-      <div class="service-card">
-
-        <img
-          src="images/WhatsApp Image 2026-09-16 at 3.09.25 PM.jpeg"
-          alt="Guest House Accommodation"
-        >
-
-        <div class="service-card-content">
-
-          <div class="service-icon-box">
-            <i class="fas fa-key"></i>
-          </div>
-
-          <h3>Your Home Away From Home</h3>
-
-          <p>
-            Enjoy a comfortable base while visiting Kintampo for work,
-            travel, family visits or relaxation.
-          </p>
+          <img
+            src="images/reception-tv-area.jpg"
+            alt="Reception TV area at Prince of Peace Executive Guest House"
+          >
 
         </div>
 
-      </div>
 
 
-      <!-- PHOTO 7 -->
-      <div class="service-card">
+        <!-- ROOMS -->
 
-        <img
-          src="images/WhatsApp Image 2026-09-16 at 3.09.26 PM.jpeg"
-          alt="Prince of Peace Executive Guest House"
-        >
+        <div class="gallery-item">
 
-        <div class="service-card-content">
-
-          <div class="service-icon-box">
-            <i class="fas fa-star"></i>
-          </div>
-
-          <h3>Executive Experience</h3>
-
-          <p>
-            A welcoming guest house experience designed with comfort and
-            convenience in mind.
-          </p>
+          <img
+            src="images/room-1.jpg"
+            alt="Room 1 at Prince of Peace Executive Guest House"
+          >
 
         </div>
 
-      </div>
 
+        <div class="gallery-item">
 
-      <!-- PHOTO 8 -->
-      <div class="service-card">
-
-        <img
-          src="images/WhatsApp Image 2026-09-16 at 3.09.26 PM (1).jpeg"
-          alt="Prince of Peace Guest House"
-        >
-
-        <div class="service-card-content">
-
-          <div class="service-icon-box">
-            <i class="fas fa-house-user"></i>
-          </div>
-
-          <h3>Stay With Us</h3>
-
-          <p>
-            Make Prince of Peace Executive Guest House your comfortable
-            choice when staying in Kintampo.
-          </p>
+          <img
+            src="images/room-2.jpg"
+            alt="Room 2 at Prince of Peace Executive Guest House"
+          >
 
         </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/room-3.jpg"
+            alt="Room 3 at Prince of Peace Executive Guest House"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/room-4.jpg"
+            alt="Room 4 at Prince of Peace Executive Guest House"
+          >
+
+        </div>
+
+
+
+        <!-- FEATURED ROOM -->
+
+        <div class="gallery-item">
+
+          <img
+            src="images/featured-room.jpg"
+            alt="Featured room at Prince of Peace Executive Guest House"
+          >
+
+        </div>
+
+
+
+        <!-- ADDITIONAL GALLERY -->
+
+        <div class="gallery-item">
+
+          <img
+            src="images/gallery-1.jpg"
+            alt="Guest house interior"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/gallery-2.jpg"
+            alt="Guest house interior"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/gallery-3.jpg"
+            alt="Guest house interior"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/gallery-4.jpg"
+            alt="Guest house room"
+          >
+
+        </div>
+
+
+
+        <!-- EXTERIOR -->
+
+        <div class="gallery-item">
+
+          <img
+            src="images/hero-1.jpg"
+            alt="Prince of Peace Executive Guest House exterior"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/hero-2.jpg"
+            alt="Prince of Peace Executive Guest House exterior"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/hero-3.jpg"
+            alt="Prince of Peace Executive Guest House exterior"
+          >
+
+        </div>
+
+
+
+        <!-- SURROUNDINGS / SIGNBOARD -->
+
+        <div class="gallery-item">
+
+          <img
+            src="images/surroundings-1.jpg"
+            alt="Prince of Peace Executive Guest House signboard"
+          >
+
+        </div>
+
 
       </div>
 
     </div>
+
 
   </section>
 
 
-  <!-- GUEST SERVICES -->
+
+  <!-- =====================================================
+       GUEST SERVICES
+  ===================================================== -->
+
   <section class="section container">
 
     <div class="section-title">
+
       <p>WHAT WE OFFER</p>
+
       <h2>Guest Services</h2>
+
     </div>
 
 
     <div class="services-grid">
+
 
       <div class="service-card">
 
         <div class="service-card-content">
 
           <div class="service-icon-box">
+
             <i class="fas fa-bed"></i>
+
           </div>
 
           <h3>Comfortable Stay</h3>
@@ -399,12 +1002,15 @@
       </div>
 
 
+
       <div class="service-card">
 
         <div class="service-card-content">
 
           <div class="service-icon-box">
+
             <i class="fas fa-concierge-bell"></i>
+
           </div>
 
           <h3>Guest Hospitality</h3>
@@ -418,12 +1024,15 @@
       </div>
 
 
+
       <div class="service-card">
 
         <div class="service-card-content">
 
           <div class="service-icon-box">
+
             <i class="fas fa-location-dot"></i>
+
           </div>
 
           <h3>Kintampo Location</h3>
@@ -437,12 +1046,15 @@
       </div>
 
 
+
       <div class="service-card">
 
         <div class="service-card-content">
 
           <div class="service-icon-box">
+
             <i class="fas fa-calendar-check"></i>
+
           </div>
 
           <h3>Stay With Us</h3>
@@ -455,15 +1067,21 @@
 
       </div>
 
+
     </div>
 
   </section>
 
 
-  <!-- CONTACT -->
+
+  <!-- =====================================================
+       CONTACT
+  ===================================================== -->
+
   <section class="section container" id="contact">
 
     <div class="info-section">
+
 
       <div class="section-title">
 
@@ -473,7 +1091,9 @@
 
       </div>
 
+
       <div class="info-grid">
+
 
         <div class="info-block">
 
@@ -485,12 +1105,22 @@
             Speak with our guest house team for accommodation enquiries.
           </p>
 
-          <!-- Replace the number below with the guest house's real number -->
-          <a href="tel:+233000000000" class="primary-button">
+
+          <!-- CHANGE THIS NUMBER WHEN CLIENT CONFIRMS IT -->
+
+          <a
+            href="tel:+233000000000"
+            class="primary-button"
+          >
+
+            <i class="fas fa-phone"></i>
+
             Call Now
+
           </a>
 
         </div>
+
 
 
         <div class="info-block">
@@ -500,12 +1130,17 @@
           <h3>Location</h3>
 
           <p>
+
             Prince of Peace Executive Guest House
+
             <br>
+
             Kintampo, Ghana
+
           </p>
 
         </div>
+
 
 
         <div class="info-block">
@@ -517,7 +1152,7 @@
           <div class="hours-list">
 
             <p>
-              Contact us for availability
+              Contact us for availability.
             </p>
 
             <p>
@@ -528,6 +1163,7 @@
 
         </div>
 
+
       </div>
 
     </div>
@@ -535,24 +1171,169 @@
   </section>
 
 
-  <!-- FOOTER -->
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
   <footer class="main-footer">
 
     <div class="container">
 
-      <h2>Prince of Peace Executive Guest House</h2>
+      <h2>
+        Prince of Peace Executive Guest House
+      </h2>
 
       <p>
         Comfort, peace and executive hospitality in Kintampo.
       </p>
 
       <p>
-        ©️ 2026 Prince of Peace Executive Guest House. All rights reserved.
+        © 2026 Prince of Peace Executive Guest House.
+        All rights reserved.
       </p>
 
     </div>
 
   </footer>
 
+
+
+  <!-- =====================================================
+       HERO SLIDER JAVASCRIPT
+  ===================================================== -->
+
+  <script>
+
+    const slides = document.querySelectorAll(".hero-slide");
+    const dots = document.querySelectorAll(".hero-dot");
+
+    const previousButton = document.querySelector(".hero-prev");
+    const nextButton = document.querySelector(".hero-next");
+
+    let currentSlide = 0;
+
+    let autoSlide;
+
+
+    function showSlide(index) {
+
+      if (index >= slides.length) {
+        currentSlide = 0;
+      }
+
+      else if (index < 0) {
+        currentSlide = slides.length - 1;
+      }
+
+      else {
+        currentSlide = index;
+      }
+
+
+      slides.forEach((slide, i) => {
+
+        slide.classList.toggle(
+          "active",
+          i === currentSlide
+        );
+
+      });
+
+
+      dots.forEach((dot, i) => {
+
+        dot.classList.toggle(
+          "active",
+          i === currentSlide
+        );
+
+      });
+
+    }
+
+
+
+    function nextSlide() {
+
+      showSlide(currentSlide + 1);
+
+    }
+
+
+
+    function previousSlide() {
+
+      showSlide(currentSlide - 1);
+
+    }
+
+
+
+    function startAutoSlide() {
+
+      clearInterval(autoSlide);
+
+      autoSlide = setInterval(
+        nextSlide,
+        5000
+      );
+
+    }
+
+
+
+    nextButton.addEventListener(
+      "click",
+      function() {
+
+        nextSlide();
+
+        startAutoSlide();
+
+      }
+    );
+
+
+
+    previousButton.addEventListener(
+      "click",
+      function() {
+
+        previousSlide();
+
+        startAutoSlide();
+
+      }
+    );
+
+
+
+    dots.forEach((dot, index) => {
+
+      dot.addEventListener(
+        "click",
+        function() {
+
+          showSlide(index);
+
+          startAutoSlide();
+
+        }
+      );
+
+    });
+
+
+
+    showSlide(0);
+
+    startAutoSlide();
+
+
+  </script>
+
+
 </body>
+
 </html>
