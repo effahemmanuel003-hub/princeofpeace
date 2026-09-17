@@ -1,454 +1,558 @@
-/* ================================
-   PRINCE OF PEACE EXECUTIVE GUEST HOUSE
-   MAIN WEBSITE STYLES
-================================ */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f7f9fc;
-  color: #172033;
-  line-height: 1.7;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  width: 90%;
-  max-width: 1150px;
-  margin: auto;
-}
-
-
-/* ================================
-   HEADER
-================================ */
-
-.main-header {
-  background: #ffffff;
-  border-bottom: 1px solid #e6eaf0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.header-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  min-height: 82px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-}
-
-.logo {
-  font-size: 27px;
-  font-weight: 800;
-  color: #1769e0;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.nav-links a {
-  color: #344054;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #1769e0;
-}
-
-.call-btn-top {
-  background: #1769e0;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  font-weight: 700;
-  transition: 0.3s;
-}
-
-.call-btn-top:hover {
-  background: #0d55bb;
-  transform: translateY(-2px);
-}
-
-
-/* ================================
-   HERO
-================================ */
-
-.hero-section {
-  background: linear-gradient(
-    135deg,
-    #eaf3ff,
-    #f8fbff
-  );
-
-  padding: 100px 0;
-}
-
-.hero-content {
-  max-width: 760px;
-}
-
-.hero-tag {
-  color: #1769e0;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  margin-bottom: 18px;
-}
-
-.hero-content h1 {
-  font-size: 52px;
-  line-height: 1.15;
-  margin-bottom: 25px;
-  color: #111827;
-}
-
-.hero-content > p:not(.hero-tag) {
-  font-size: 19px;
-  color: #667085;
-  max-width: 680px;
-  margin-bottom: 32px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.primary-button,
-.secondary-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-
-  padding: 14px 25px;
-  border-radius: 9px;
-
-  font-weight: 700;
-  transition: 0.3s;
-}
-
-.primary-button {
-  background: #1769e0;
-  color: white;
-}
-
-.primary-button:hover {
-  background: #0d55bb;
-  transform: translateY(-2px);
-}
-
-.secondary-button {
-  background: white;
-  color: #1769e0;
-  border: 2px solid #1769e0;
-}
-
-.secondary-button:hover {
-  background: #1769e0;
-  color: white;
-}
-
-
-/* ================================
-   SECTIONS
-================================ */
-
-.section {
-  padding-top: 85px;
-  padding-bottom: 85px;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-title p {
-  color: #1769e0;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  margin-bottom: 8px;
-}
-
-.section-title h2 {
-  font-size: 38px;
-  line-height: 1.2;
-  color: #111827;
-}
-
-
-/* ================================
-   ABOUT / INFORMATION
-================================ */
-
-.info-section {
-  background: white;
-  border-radius: 20px;
-  padding: 45px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.info-block {
-  text-align: center;
-  padding: 20px;
-}
-
-.info-block i {
-  font-size: 34px;
-  color: #1769e0;
-  margin-bottom: 18px;
-}
-
-.info-block h3 {
-  font-size: 21px;
-  margin-bottom: 10px;
-  color: #172033;
-}
-
-.info-block p {
-  color: #667085;
-}
-
-
-/* ================================
-   ROOMS / GUEST HOUSE CARDS
-================================ */
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-.service-card {
-  background: white;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid #e5eaf0;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
-}
-
-
-/* ================================
-   ROOM / FACILITY IMAGES
-   Shows the complete photograph
-================================ */
-
-.service-card img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  background: #eef2f6;
-}
-
-
-/* ================================
-   CARD CONTENT
-================================ */
-
-.service-card-content {
-  padding: 30px;
-}
-
-.service-icon-box {
-  width: 52px;
-  height: 52px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #eaf3ff;
-  color: #1769e0;
-
-  border-radius: 12px;
-
-  margin-bottom: 18px;
-}
-
-.service-icon-box i {
-  font-size: 23px;
-}
-
-.service-card-content h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #172033;
-}
-
-.service-card-content p {
-  color: #667085;
-}
-
-
-/* ================================
-   BOOKING / CONTACT
-================================ */
-
-#contact {
-  padding-bottom: 100px;
-}
-
-.hours-list p {
-  margin-bottom: 5px;
-}
-
-
-/* ================================
-   FOOTER
-================================ */
-
-.main-footer {
-  background: #111827;
-  color: white;
-  text-align: center;
-  padding: 55px 0;
-}
-
-.main-footer h2 {
-  margin-bottom: 10px;
-}
-
-.main-footer p {
-  color: #b8c0cc;
-  margin-bottom: 8px;
-}
-
-
-/* ================================
-   MOBILE
-================================ */
-
-@media (max-width: 800px) {
-
-  .header-container {
-    min-height: auto;
-    padding: 18px 0;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    font-size: 22px;
-  }
-
-  nav {
-    order: 3;
-    width: 100%;
-  }
-
-  .nav-links {
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-
-  .call-btn-top {
-    padding: 10px 15px;
-  }
-
-  .hero-section {
-    padding: 70px 0;
-  }
-
-  .hero-content h1 {
-    font-size: 38px;
-  }
-
-  .hero-content > p:not(.hero-tag) {
-    font-size: 17px;
-  }
-
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title h2 {
-    font-size: 31px;
-  }
-
-  .info-section {
-    padding: 25px;
-  }
-}
-
-
-/* ================================
-   SMALL PHONES
-================================ */
-
-@media (max-width: 480px) {
-
-  .container {
-    width: 92%;
-  }
-
-  .hero-content h1 {
-    font-size: 32px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .primary-button,
-  .secondary-button {
-    width: 100%;
-  }
-
-  .service-card-content {
-    padding: 24px;
-  }
-
-  .service-card-content h3 {
-    font-size: 21px;
-  }
-
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Prince of Peace Executive Guest House | Kintampo</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-container">
+
+      <div class="logo">
+        Prince of Peace Executive Guest House
+      </div>
+
+      <nav>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#rooms">Rooms</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <a href="#contact" class="call-btn-top">
+        <i class="fas fa-calendar-check"></i>
+        Book Your Stay
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero-section" id="home">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <p class="hero-tag">
+          PRINCE OF PEACE EXECUTIVE GUEST HOUSE • KINTAMPO
+        </p>
+
+        <h1>
+          Comfort, Peace
+          <br>
+          &amp; Executive Hospitality
+        </h1>
+
+        <p>
+          Experience a peaceful and comfortable stay at Prince of Peace
+          Executive Guest House, where welcoming spaces and quality
+          hospitality come together.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#rooms" class="primary-button">
+            Explore Our Rooms
+          </a>
+
+          <a href="#contact" class="secondary-button">
+            <i class="fas fa-phone"></i>
+            Contact Us
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="section container" id="about">
+
+    <div class="section-title">
+      <p>ABOUT US</p>
+      <h2>Welcome to Prince of Peace</h2>
+    </div>
+
+    <div class="info-section">
+
+      <div class="info-grid">
+
+        <div class="info-block">
+
+          <i class="fas fa-house"></i>
+
+          <h3>Comfortable Accommodation</h3>
+
+          <p>
+            Enjoy a welcoming environment designed to give guests a
+            comfortable and relaxing place to stay.
+          </p>
+
+        </div>
+
+
+        <div class="info-block">
+
+          <i class="fas fa-concierge-bell"></i>
+
+          <h3>Warm Hospitality</h3>
+
+          <p>
+            We aim to provide friendly and attentive hospitality for guests
+            visiting Kintampo for business, travel or relaxation.
+          </p>
+
+        </div>
+
+
+        <div class="info-block">
+
+          <i class="fas fa-heart"></i>
+
+          <h3>Peaceful Stay</h3>
+
+          <p>
+            Our guest house offers a peaceful atmosphere where guests can
+            relax and enjoy their stay.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ROOMS & GUEST HOUSE -->
+  <section class="section container" id="rooms">
+
+    <div class="section-title">
+      <p>OUR GUEST HOUSE</p>
+      <h2>Explore Prince of Peace</h2>
+    </div>
+
+
+    <div class="services-grid">
+
+
+      <!-- PHOTO 1 -->
+      <div class="service-card">
+
+        <img
+          src="images/WhatsApp Image 2026-09-16 at 3.09.03 PM (1).jpeg"
+          alt="Prince of Peace Executive Guest House"
+        >
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-hotel"></i>
+          </div>
+
+          <h3>Executive Accommodation</h3>
+
+          <p>
+            Comfortable accommodation in a welcoming environment for
+            visitors looking for a peaceful place to stay in Kintampo.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 2 -->
+      <div class="service-card">
+
+        <img
+          src="images/WhatsApp Image 2026-09-16 at 3.09.03 PM.jpeg"
+          alt="Guest House Room"
+        >
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-bed"></i>
+          </div>
+
+          <h3>Comfortable Rooms</h3>
+
+          <p>
+            Relax in comfortable spaces designed to provide guests with a
+            pleasant and convenient stay.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 3 -->
+      <div class="service-card">
+
+        <img
+          src="images/WhatsApp Image 2026-09-16 at 3.09.06 PM.jpeg"
+          alt="Guest House Interior"
+        >
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-couch"></i>
+          </div>
+
+          <h3>Welcoming Spaces</h3>
+
+          <p>
+            Discover inviting spaces created to make your visit comfortable
+            from arrival to departure.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 4 -->
+      <div class="service-card">
+
+        <img
+          src="images/WhatsApp Image 2026-09-16 at 3.09.07 PM.jpeg"
+          alt="Prince of Peace Guest House Facility"
+        >
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-building"></i>
+          </div>
+
+          <h3>Guest House Facilities</h3>
+
+          <p>
+            Explore the facilities and surroundings available at Prince of
+            Peace Executive Guest House.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 5 -->
+      <div class="service-card">
+
+        <img
+          src="images/WhatsApp Image 2026-09-16 at 3.09.25 PM (1).jpeg"
+          alt="Guest House Environment"
+        >
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-leaf"></i>
+          </div>
+
+          <h3>Peaceful Environment</h3>
+
+          <p>
+            A calm and welcoming environment where guests can unwind after a
+            busy day.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 6 -->
+      <div class="service-card">
+
+        <img
+          src="images/WhatsApp Image 2026-09-16 at 3.09.25 PM.jpeg"
+          alt="Guest House Accommodation"
+        >
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-key"></i>
+          </div>
+
+          <h3>Your Home Away From Home</h3>
+
+          <p>
+            Enjoy a comfortable base while visiting Kintampo for work,
+            travel, family visits or relaxation.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 7 -->
+      <div class="service-card">
+
+        <img
+          src="images/WhatsApp Image 2026-09-16 at 3.09.26 PM (1).jpeg"
+          alt="Prince of Peace Executive Guest House"
+        >
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-star"></i>
+          </div>
+
+          <h3>Executive Experience</h3>
+
+          <p>
+            A welcoming guest house experience designed with comfort and
+            convenience in mind.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 8 -->
+      <div class="service-card">
+
+        <img
+          src="images/WhatsApp Image 2026-09-16 at 3.09.26 PM.jpeg"
+          alt="Prince of Peace Guest House"
+        >
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-house-user"></i>
+          </div>
+
+          <h3>Stay With Us</h3>
+
+          <p>
+            Make Prince of Peace Executive Guest House your comfortable
+            choice when staying in Kintampo.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GUEST SERVICES -->
+  <section class="section container">
+
+    <div class="section-title">
+      <p>WHAT WE OFFER</p>
+      <h2>Guest Services</h2>
+    </div>
+
+
+    <div class="services-grid">
+
+      <div class="service-card">
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-bed"></i>
+          </div>
+
+          <h3>Comfortable Stay</h3>
+
+          <p>
+            Comfortable accommodation for guests visiting Kintampo.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-concierge-bell"></i>
+          </div>
+
+          <h3>Guest Hospitality</h3>
+
+          <p>
+            A welcoming environment focused on making your stay pleasant.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-location-dot"></i>
+          </div>
+
+          <h3>Kintampo Location</h3>
+
+          <p>
+            Conveniently located in Kintampo, Ghana.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-card-content">
+
+          <div class="service-icon-box">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+
+          <h3>Stay With Us</h3>
+
+          <p>
+            Contact us to enquire about accommodation and availability.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="section container" id="contact">
+
+    <div class="info-section">
+
+      <div class="section-title">
+
+        <p>CONTACT US</p>
+
+        <h2>Plan Your Stay</h2>
+
+      </div>
+
+      <div class="info-grid">
+
+        <div class="info-block">
+
+          <i class="fas fa-phone"></i>
+
+          <h3>Call Us</h3>
+
+          <p>
+            Speak with our guest house team for accommodation enquiries.
+          </p>
+
+          <!-- Replace the number below with the guest house's real number -->
+          <a href="tel:+233000000000" class="primary-button">
+            Call Now
+          </a>
+
+        </div>
+
+
+        <div class="info-block">
+
+          <i class="fas fa-location-dot"></i>
+
+          <h3>Location</h3>
+
+          <p>
+            Prince of Peace Executive Guest House
+            <br>
+            Kintampo, Ghana
+          </p>
+
+        </div>
+
+
+        <div class="info-block">
+
+          <i class="fas fa-clock"></i>
+
+          <h3>Guest Enquiries</h3>
+
+          <div class="hours-list">
+
+            <p>
+              Contact us for availability
+            </p>
+
+            <p>
+              We look forward to welcoming you.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+
+    <div class="container">
+
+      <h2>Prince of Peace Executive Guest House</h2>
+
+      <p>
+        Comfort, peace and executive hospitality in Kintampo.
+      </p>
+
+      <p>
+        ©️ 2026 Prince of Peace Executive Guest House. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
